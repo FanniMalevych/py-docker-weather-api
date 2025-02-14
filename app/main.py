@@ -26,7 +26,8 @@ def get_weather() -> None:
             condition = weather_data["current"]["condition"]["text"]
 
             print(f"Performing requests to Weather API for city {CITY}...")
-            print(f"{CITY}/{country} {localtime} - {temperature}°C, {condition}")
+            print(f"{CITY}/{country} {localtime} - {temperature}°C, "
+                  f"{condition}")
 
         except requests.exceptions.RequestException as e:
             print(f"Request error: {e}")
